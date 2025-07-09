@@ -36,19 +36,19 @@ def ask_gem(prompt):
     else:
         command = gemini_output.strip()
 
-    print(f"✅ Command: {command}")
+    print(f" Command: {command}")
     return command
 
 
 def execute_command(command):
-    print("🚀 Running the command...")
+    print(" Running the command...")
     try:
         result = subprocess.run(command, shell=True, capture_output=True, text=True)
         print(result.stdout)
         if result.stderr:
-            print("⚠️ Error:", result.stderr)
+            print("Error:", result.stderr)
     except Exception as e:
-        print("❌ Exception:", str(e))
+        print(" Exception:", str(e))
     print("-" * 50)
 
 
@@ -60,4 +60,4 @@ if __name__ == "__main__":
     if cmd_to_run:
         execute_command(cmd_to_run)
     else:
-        print("❗ No valid command received.")
+        print(" No valid command received.")
