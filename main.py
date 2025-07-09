@@ -3,7 +3,7 @@ import subprocess
 import re
 
 # Set your Gemini API key
-API_KEY = 'AIzaSyC0PMNnSem09iSZUqiizGq0VxYoikHB-3I'
+API_KEY = ''
 
 # Configure Gemini API
 genai.configure(api_key=API_KEY)
